@@ -1,0 +1,44 @@
+/* You can add global styles to this file, and also import other style files */
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif;
+background-color: #f5f5f5;
+}
+.text-center{
+    text-align: center;
+}
+
+.full-width{
+    width: 100%;
+}
+.ml10{
+    margin-left: 10px  !important;
+}
+.mr10{
+    margin-right: 10px  !important;
+}
+.mt10{
+    margin-top: 10px  !important;
+}
+.mb10{
+    margin-bottom: 10px  !important;
+
+}
+
+
+.ml25{
+    margin-left: 25px  !important;
+}
+.mr25{
+    margin-right: 25px  !important;
+}
+.mt25{
+    margin-top: 25px !important;
+}
+.mb25{
+    margin-bottom: 25px  !important;
+    
+}
+.mb100{
+    margin-bottom: 100px !important;
+}

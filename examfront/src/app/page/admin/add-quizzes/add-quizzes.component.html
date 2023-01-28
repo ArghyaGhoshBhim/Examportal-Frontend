@@ -1,0 +1,55 @@
+
+<mat-card>
+<h1>Add Quizzes</h1>
+<div class="bootstrap-wrapper">
+    <div class="row">
+        <div class="col-md-6 offset-md-3">
+            <form [formGroup]="form" (ngSubmit)="addQuiz()">
+                <mat-form-field class="full-width" appearance="outline">
+                    <mat-label>Title</mat-label>
+                    <input formControlName="title" type="text" matInput  placeholder="Title">
+                </mat-form-field>
+
+                    <div class="row">
+                        <div class="col-md-6">
+                            <mat-form-field class="w100" appearance="outline">
+                                
+                                <mat-label>Number Of Question</mat-label>
+                                <input formControlName="numberOfQuestion" type="number" matInput  placeholder="Number Of Question">
+                              </mat-form-field>
+                        </div>
+                        <div class="col-md-6">
+                            <mat-form-field class="full-width w100" appearance="outline">
+                                <mat-label>Max Marks</mat-label>
+                                <input type="number" formControlName="maxMarks" matInput  placeholder="Max Marks">
+                            </mat-form-field>
+                        </div>
+                    </div>
+            
+                    <div class="row">
+                        <div class="col-md-6">
+                            <mat-slide-toggle  formControlName="active">Update Status</mat-slide-toggle>
+                        </div>
+                        <div class="col-md-6">
+                            <mat-form-field class="w100" appearance="outline">
+                                <mat-select placeholder="Category" formControlName="category" >
+                                    <mat-option *ngFor="let category of categories" [value]="category">{{category.title}}</mat-option>
+                                  </mat-select>
+                            </mat-form-field>
+                                
+                        </div>
+                    </div>
+                    <mat-form-field class="full-width" appearance="outline">
+                        <mat-label>Description</mat-label>
+                        <textarea type="text" formControlName="description" matInput  placeholder="Description" rows="5" placeholder="Description"> 
+                        </textarea>
+                    </mat-form-field>
+                    <div class="container text-center mb100">
+                        <button type="submit" mat-raised-button color="primary">Submit</button>
+                    </div>
+                    
+            </form>
+        </div>
+    </div>
+</div>
+</mat-card>

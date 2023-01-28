@@ -1,0 +1,49 @@
+<mat-card>
+    <h1>Welcome to profile</h1>
+    <mat-card-content>
+        <div class="bootstrap-wrapper">
+            <div class="container">
+                <div class="container text-center">
+                    <img src="https://i0.wp.com/researchictafrica.net/wp/wp-content/uploads/2016/10/default-profile-pic.jpg?ssl=1" 
+                    alt="" class="profile-pic">
+                    <h1>{{user.firstName}} {{user.lastName}}</h1>
+                </div>
+                <div class="row">
+                    <div class="col-md-10 offset-md-1 text-center">
+                        <table class="table mt25">
+                            <tr>
+                                <td>Username</td>
+                                <td>{{user.userName}}</td>
+                            </tr>
+                            <tr>
+                                <td>Email</td>
+                                <td>{{user.email}}</td>
+                            </tr>
+                            <tr>
+                                <td>id</td>
+                                <td>{{user.id}}</td>
+                            </tr>
+                            <tr>
+                                <td>Phone</td>
+                                <td>{{user.phone}}</td>
+                            </tr>
+                            <tr>
+                                <td>Role</td>
+                                <td>{{user.authorities[0].authority}}</td>
+                            </tr>
+                            <tr>
+                                <td>Status</td>
+                                <td>{{user.enabled?"ACTIVE":"NOT ACTIVE"}}</td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+            </div>
+           
+        </div>
+    </mat-card-content>
+    <mat-card-actions class="text-center">
+        <button mat-raised-button color="primary">Update</button>
+        <button mat-raised-button color="accent">SHARE</button>
+      </mat-card-actions>
+</mat-card>

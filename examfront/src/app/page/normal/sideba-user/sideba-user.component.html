@@ -1,0 +1,7 @@
+<mat-card>
+    <mat-action-list>
+        <div mat-subheader>Menu</div>
+        <button mat-list-item routerLink="/normal/load-quiz/0"><mat-icon>home</mat-icon>Home</button>
+        <button mat-list-item *ngFor="let category of categories" [routerLink]="'/normal/load-quiz/'+category.cId"><mat-icon>category</mat-icon>{{category.title}}</button>
+    </mat-action-list>
+</mat-card>

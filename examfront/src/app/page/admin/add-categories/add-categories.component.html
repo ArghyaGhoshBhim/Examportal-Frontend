@@ -1,0 +1,30 @@
+<p>add-categories works!</p>
+<mat-card>
+    <h1>add-categories</h1>
+    <div class="bootstrap-wrapper">
+        <div class="row">
+            <div class="col-md-6 offset-md-3">
+                <form [formGroup]="form" (ngSubmit)="formSubmit()">
+                    <mat-form-field class="full-width" appearance="outline">
+                        <mat-label>Title</mat-label>
+                        <input type="text" formControlName="title" matInput placeholder="Title">
+                    </mat-form-field>
+                    <mat-form-field class="full-width" appearance="outline">
+                        <mat-label>Description</mat-label>
+                        <textarea
+                        matInput
+                        placeholder="Description"
+                        rows="8"
+                        formControlName="description"
+                        >
+                        </textarea> 
+                    </mat-form-field>
+                    <div class="container text-center">
+                        <button mat-raised-button type="submit" color="primary">Add</button>
+                    </div>
+                    
+                </form>
+            </div>
+        </div>
+    </div>
+</mat-card>

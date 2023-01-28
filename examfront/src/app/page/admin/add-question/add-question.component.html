@@ -1,0 +1,77 @@
+
+<mat-card>
+    <div class="mt15">
+        <h1>Add Question {{qTitle}}</h1>
+    </div>
+    
+<div class="botstrap-wrapper mt25">
+    <div class="row">
+        <div class="col-md-8 offset-md-2">
+            <form [formGroup]="form" (ngSubmit)="addQuestion()">
+                <mat-form-field class="example-full-width" appearance="outline" class="w100">
+                    <mat-label>Write Question Content</mat-label>
+                   <textarea formControlName="content" type="text" id="" matInput placeholder="Enter Content" rows="6"></textarea>
+                </mat-form-field>
+
+                <div class="row">
+                    <div class="col-md-6">
+                        <mat-form-field class="example-full-width" appearance="outline" class="w100">
+                            <mat-label>Option1</mat-label>
+                            <input [(ngModel)]="option1"  formControlName="option1" matInput  placeholder="Enter Option">
+                        </mat-form-field>
+                    </div>
+                    <div class="col-md-6">
+                        <mat-form-field class="example-full-width" appearance="outline" class="w100">
+                            <mat-label>Option2</mat-label>
+                            <input [(ngModel)]="option2" formControlName="option2" matInput  placeholder="Enter Option">
+                        </mat-form-field>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-md-6">
+                        <mat-form-field class="example-full-width" appearance="outline" class="w100">
+                            <mat-label>Option3</mat-label>
+                            <input [(ngModel)]="option3" formControlName="option3" matInput   placeholder="Enter Option" >
+                        </mat-form-field>
+                    </div>
+                    <div class="col-md-6">
+                        <mat-form-field class="example-full-width" appearance="outline" class="w100">
+                            <mat-label>Option4</mat-label>
+                            <input [(ngModel)]="option4" formControlName="option4" matInput  placeholder="Enter Option">
+                        </mat-form-field>
+                    </div>
+                </div>
+
+                <mat-form-field appearance="fill">
+                    <mat-label>Favorite food</mat-label>
+                    <mat-select formControlName="answer">
+                        <mat-option [value]="option1">
+                            {{option1}}
+                          </mat-option>
+                          <mat-option [value]="option2">
+                            {{option2}}
+                          </mat-option>
+                          <mat-option [value]="option3">
+                            {{option3}}
+                          </mat-option>
+                          <mat-option [value]="option4">
+                            {{option4}}
+                          </mat-option>
+                    </mat-select>
+                  </mat-form-field>
+
+                <div class="container text-center">
+                    <button type="submit" mat-raised-button color="primary">Submit</button>
+                </div>
+                
+            </form>
+
+
+
+        </div>
+    </div>
+</div>
+  
+</mat-card>   
+

@@ -1,0 +1,24 @@
+<div class="bootstrap-wrapper mt25">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6 offset-md-3 text-center">
+                
+                <mat-card>
+                    <h1>Login here !!</h1>
+                    <form [formGroup]="form" (ngSubmit)="formSubmit()">
+                        <mat-form-field class="full-width" appearance="outline">
+                            <mat-label>Username</mat-label>
+                            <input formControlName="username" matInput placeholder="Username">
+                        </mat-form-field>
+            
+                        <mat-form-field class="full-width" appearance="outline">
+                            <mat-label>Password</mat-label>
+                            <input formControlName="password" matInput placeholder="Password">
+                        </mat-form-field>
+                        <button mat-raised-button type="submit" color="accent">Login</button>
+                    </form>
+                </mat-card>
+            </div>
+        </div>
+    </div>
+</div>

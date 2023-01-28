@@ -1,0 +1,20 @@
+<mat-card>
+  <mat-list>
+    <div mat-subheader>Categories</div>
+    <mat-list-item *ngFor="let c of categories">
+      <mat-icon mat-list-icon>list</mat-icon>
+      <div mat-line>{{ c.title }}</div>
+      <div mat-line>{{ c.description }}</div>
+      <div class="example-button-container">
+        <button mat-button aria-label="Example icon button with a delete icon" (click)="deleteCategory(c)">
+          <mat-icon color="accent" >delete</mat-icon>
+        </button>
+      </div>
+      <mat-divider></mat-divider>
+    </mat-list-item>
+  </mat-list>
+  <div class="cotainer text-center mt25 mb25" >
+    <button mat-raised-button color="primary" routerLink="/admin/add-categories">Add Categories</button>
+  </div>
+
+</mat-card>

@@ -1,0 +1,46 @@
+<mat-card>
+    <h1>View Quiz Questions</h1>
+    <div class="bootstrap-wrapper">
+        <div class="container text-center">
+            <button [routerLink]="'/admin/add-questions/'+qId+'/'+qTitle" mat-raised-button color="primary">Add Questions</button>
+        </div>
+    </div>
+</mat-card>
+
+
+<mat-card class="mt10" *ngFor="let question of questions;  let i = index">
+    <mat-card-subtitle>
+      {{i+1}}. {{question.content}}
+    </mat-card-subtitle>
+    <mat-card-content>
+        <div class="row mt25">
+            <div class="col-md-5">
+                a. {{question.option1}}
+            </div>
+            <div class="col-md-5">
+                b. {{question.option2}}
+            </div>
+        </div>
+        <div class="row mt25 mb10">
+            <div class="col-md-5">
+                c. {{question.option3}}
+            </div>
+            <div class="col-md-5">
+                d. {{question.option4}}
+            </div>
+            
+        </div>
+        <mat-divider></mat-divider>
+        <div class="mt25">
+           <div class="row">
+            <div class="col-md-10">
+                <span><b>Correct Answer:</b> {{question.answer}}</span>
+            </div>
+            <div class="col-md-2">
+                <button mat-button color="accent" (click)="deleteQuestion(question.quesId)">Delete</button>
+                <button mat-button color="primary" >Update</button>
+            </div>
+           </div>
+        </div>
+      </mat-card-content>
+</mat-card>

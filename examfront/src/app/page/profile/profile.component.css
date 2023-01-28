@@ -1,0 +1,17 @@
+.profile-pic{
+    height: 150px;
+    width: 150px;
+    border: 2px solid rgb(183, 187, 252);
+    border-radius: 50%;
+}
+.table {
+    width: 100%;
+    border-collapse: collapse;
+
+  }
+
+.table tr td{
+    padding: 15px;
+    border: 2px solid rgb(234, 234, 234);
+    font-size: 20px;
+  }
